@@ -20,7 +20,7 @@
             <div class="search-container">
                 <input type="text" placeholder="Sök produkt" class="search-bar">
                 <div class="icons">
-                    <span class="icon-heart"><i class="bi bi-heart-fill"></i></span>
+                    <span class="icon-heart-header"><i class="bi bi-heart-fill"></i></span>
                     <span class="icon-basket"><i class="bi bi-basket2-fill"></i></span>
                 </div>
             </div>
@@ -37,23 +37,52 @@
         </div>
     </header>
     
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <img src="Hero.jpg" alt="Hero Image" class="hero-image">
             <div class="hero-text">
-                <h2>Gratis frakt och returer</h2>
-                <p>Expressfrakt och säkra betalningar. Nyheter varje dag.</p>
+                <h2>VINTER SALE UPP TLL 60%!</h2>
+                <p> Handla för mer än 300 SEK och få en gratis frakt!</p>
             </div>
         </div>
     </section>
     
 
+<!-- Spots Section -->
+<section class="spots">
+    <div class="spot-grid">
+        <div class="spot">
+            <a href="http://127.0.0.1:5501/product-details.html" class="spot-link">
+                <img src="spot1.jpg" alt="Spot 1" class="spot-image">
+                <div class="spot-text">vinterkollektion</div>
+            </a>
+        </div>
+        <div class="spot">
+            <a href="http://127.0.0.1:5501/product-details.html" class="spot-link">
+                <img src="spot2.jpg" alt="Spot 2" class="spot-image">
+                <div class="spot-text">våra rekommendationer</div>
+            </a>
+        </div>
+        <div class="spot">
+            <a href="http://127.0.0.1:5501/product-details.html" class="spot-link">
+                <img src="spot3.jpg" alt="Spot 3" class="spot-image">
+                <div class="spot-text">bästsäljare</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- products Section -->
     <section class="products">
         <div class="product-grid">
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
+
+                        <!-- box for "Nyhet" on the fisrt product -->
+                        <div class="new-box">Nyhet</div>
                         <img src="1.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart-fill"></i></span>
                     </div>
@@ -64,7 +93,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="2.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -76,7 +105,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="3.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -88,7 +117,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="4.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -100,7 +129,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="5.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -112,7 +141,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="6.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -124,7 +153,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="7.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -136,7 +165,7 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="http://localhost:5500/product-details.html" class="product-link">
+                <a href="http://127.0.0.1:5501/product-details.html" class="product-link">
                     <div class="image-container">
                         <img src="8.jpg" alt="Svart T-Shirt">
                         <span class="icon-heart"><i class="bi bi-heart"></i></span>
@@ -147,41 +176,98 @@
                     </div>
                 </a>
             </div>
-
         </div>
     </section>
-    
-            
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h4>Mina Sidor</h4>
-                <ul>
-                    <li><a href="#">Mina Ordrar</a></li>
-                    <li><a href="#">Mitt Konto</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Kundtjänst</h4>
-                <ul>
-                    <li><a href="#">Returnpolicy</a></li>
-                    <li><a href="#">Integritetspolicy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Shopping</h4>
-                <ul>
-                    <li><a href="#">Vinterjackor</a></li>
-                    <li><a href="#">Pufferjackor</a></li>
-                    <li><a href="#">Kappa</a></li>
-                    <li><a href="#">Trenchcoats</a></li>
-                </ul>
+    <!-- Information Section -->
+<section class="info-grid">
+    <div class="info-item">
+        <i class="bi bi-globe-americas"></i>
+        <span>Gratis frakt och returer</span>
+    </div>
+    <div class="info-item">
+        <i class="bi bi-truck"></i>
+        <span>Expressfrakt</span>
+    </div>
+    <div class="info-item">
+        <i class="bi bi-shield-shaded"></i>
+        <span>Säkra betalningar</span>
+    </div>
+    <div class="info-item">
+        <i class="bi bi-emoji-smile"></i>
+        <span>Nyheter varje dag</span>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <!-- Accordion for mobile view -->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Shopping
+            </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p>Vinterjackor</p>
+                <p>Pufferjackor</p>
+                <p>Kappa</p>
+                <p>Trenchcoats</p>
             </div>
         </div>
-        <p>&copy; 2024 Freaky Fashion. All rights reserved.</p>
-    </footer>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Mina Sidor
+            </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p>Mina Ordrar</p>
+                <p>Mitt Konto</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Kundtjänst
+            </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p>Returnpolicy</p>
+                <p>Integritetspolicy</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-</body>
-</html>
+
+    <!-- Normal footer for larger screens -->
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Shopping</h4>
+            <p>Vinterjackor</p>
+            <p>Pufferjackor</p>
+            <p>Kappa</p>
+            <p>Trenchcoats</p>
+        </div>
+        <div class="footer-column">
+            <h4>Mina Sidor</h4>
+            <p>Mina Ordrar</p>
+            <p>Mitt Konto</p>
+        </div>
+        <div class="footer-column">
+            <h4>Kundtjänst</h4>
+            <p>Returnpolicy</p>
+            <p>Integritetspolicy</p>
+        </div>
+    </div>
+    <p class="footer-trademark">&copy; Freaky Fashion</p>
+</footer>
+    </body>
+    </html>

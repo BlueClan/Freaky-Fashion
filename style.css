@@ -5,31 +5,23 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-/* General Header Styles */
+/* Header Styles */
 header {
-    background-color: #868383;
+    background-color: #b25e5e;
     padding: 20px;
-    color: white;
+    color: rgb(8, 8, 8);
 }
-
-/* Flex container for the logo and the header-right section */
-
-/* General Styles for the Header */
 .header-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically by default (mobile view) */
+    flex-direction: column; /* Stack elements vertically for the mobile view */
     align-items: flex-start;
     width: 100%;
 }
 
 /* Logo (Mobile View - 100% wide) */
 .logo {
-    width: 100%; /* Full width on mobile */
-}
-
-.logo img {
-    width: 100%; /* Ensure the image takes up full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto;
 }
 
 /* Search Bar and Icons Container */
@@ -37,13 +29,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space between search bar and icons */
-    width: 100%; /* Make container full width */
+    width: 70%; 
     padding: 10px 0;
 }
 
 /* Search Bar */
 .search-bar {
-    width: 70%; /* Adjusted width to leave space for icons */
+    width: 80%; /* not full width to leave space for icons */
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 25px;
@@ -53,7 +45,7 @@ header {
 /* Icons (Heart and Basket) */
 .icons {
     display: flex;
-    gap: 10px; /* Space between icons */
+    gap: 10px; 
 }
 
 .icons span {
@@ -69,8 +61,8 @@ header {
     display: flex;
     flex-direction: column; /* Stack items vertically by default */
     align-items: flex-start;
-    width: 100%; /* Full width */
-    margin-top: 20px; /* Add margin for spacing */
+    width: 100%;
+    margin-top: 20px;
 }
 
 .nav-menu ul li a {
@@ -82,7 +74,7 @@ header {
 }
 
 /* Breakpoint for Larger Screens */
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .header-container {
         flex-direction: column; /* Stack elements vertically for larger screens */
         align-items: flex-start; /* Align items to the left */
@@ -99,16 +91,16 @@ header {
     }
 
     .logo img {
-        width: 150px; /* Medium size for the logo on larger screens */
+        width: 300px; /* Medium size for the logo on larger screens */
         height: auto;
     }
 
     .search-bar {
-        width: 60%; /* Adjust search bar width */
+        width: 70%; 
     }
 
     .nav-menu ul {
-        flex-direction: row; /* Horizontal menu below logo */
+        flex-direction: row; /* Horizontal menu */
         justify-content: flex-start;
         margin-top: 10px;
     }
@@ -123,19 +115,18 @@ header {
 /* Hero Section */
 .hero {
     padding: 50px 20px;
-    background-color: rgba(219, 28, 28, 0.273);
+    background-color: rgba(207, 97, 97, 0.273);
     color: white;
     text-align: center;
-    margin: 40px auto; /* Separate the hero section from preceding and following sections */
-    max-width: 1200px; /* Optional: Limit the max-width to center the section */
+    margin: 40px auto; /* Separate the hero section from sections before and after */
+    max-width: 1200px; /* Limit the max-width to center the section */
     border-radius: 10px; /* Round the corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow for separation */
 }
 
 /* Flexbox container for the image and text */
 .hero-content {
     display: flex;
-    flex-direction: column; /* Column layout by default (for mobile) */
+    flex-direction: column; /* Column layout by default for mobile */
     align-items: center;
     justify-content: center;
     gap: 20px; /* Add space between image and text */
@@ -147,7 +138,6 @@ header {
     display: block;
 }
 
-/* Text Styling */
 .hero-text h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -172,13 +162,13 @@ header {
     }
 }
 
-/* Breakpoint for screens >= 1024px (lg) */
+/* Breakpoint for screens >= 1024px */
 @media (min-width: 1024px) {
     .hero-content {
-        flex-direction: row-reverse; /* Image on the left, text on the right */
+        flex-direction: row-reverse; /* Image on the right, text on the left */
         justify-content: space-between;
         align-items: center;
-        text-align: left; /* Align text to the left */
+        text-align: left;
     }
 
     .hero-image {
@@ -189,6 +179,59 @@ header {
         max-width: 45%;
     }
 }
+
+/* Spots Section */
+.spots {
+    padding: 40px 20px;
+    text-align: center; 
+    display: none; /* Hide by default */
+}
+
+.spot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Gap between spots */
+}
+
+/* Spot Styling */
+.spot {
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.spot-image {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.spot-text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; /* Center the text in the middle */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+}
+
+/* Responsive Styles for screens >= 1080px */
+@media (min-width: 1080px) {
+    .spots {
+        display: block; /* Show the spots section on larger screens */
+        padding: 40px 0; 
+    }
+
+    .spot-grid {
+        margin: 0 auto; /* Center the grid */
+        max-width: 1200px; /* Limit the max-width */
+    }
+
+    .spot-text {
+        font-size: 1.8rem;
+    }
+}
+
 
 /* Products Section */
 .products {
@@ -204,7 +247,6 @@ header {
 }
 
 /* Product Card Styling */
-/* Product Card Styling */
 .product-card {
     position: relative;
     border: 1px solid #ddd;
@@ -215,13 +257,13 @@ header {
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Slight hover effect */
+    transform: translateY(-5px); /* hover effect */
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    height: 250px; /* Fixed height to maintain consistent size */
+    height: 250px;
 }
 
 .image-container img {
@@ -247,6 +289,12 @@ header {
     font-size: 1.1rem;
 }
 
+.product-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+}
+
+/* Product Name and Price Styling */
 .product-name {
     text-align: left;
     font-size: 1rem;
@@ -257,6 +305,20 @@ header {
     text-align: right;
     font-size: 1rem;
     color: #333;
+}
+.new-box {
+    position: absolute;
+    top: 10px;  
+    background-color: rgb(0, 0, 0);  
+    color: white;  
+    padding: 5px 10px;  
+    border-radius: 5px;  
+    font-size: 0.9rem;  
+    font-weight: bold;   
+}
+
+.product-card .image-container {
+    position: relative;
 }
 
 /* Responsive Layout: 2 Columns for screens >= 640px */
@@ -273,33 +335,6 @@ header {
     }
 }
 
-/* Other existing styles */
-
-.product-card img {
-    max-width: 100%;
-}
-
-.product-card h3 {
-    margin: 10px 0;
-}
-
-.product-card p {
-    color: #333;
-    font-size: 1.1rem;
-}
-
-/* Badge */
-.badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: red;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-}
-
 /* Icons */
 .product-icons {
     display: flex;
@@ -312,61 +347,242 @@ header {
     cursor: pointer;
 }
 
+/* Information Grid Section */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: Single column */
+    gap: 20px; /* Space between items */
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center the text */
+}
+
+/* Information items styling */
+.info-item {
+    justify-content: center; /* Center items horizontally */
+    background-color: #f4f4f4; 
+    padding: 20px; /* Padding around the item */
+    transition: background-color 0.5s; /* Transition effect */
+}
+
+.info-item:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.info-item i {
+    font-size: 2rem; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Responsive Styles for screens >= 640px */
+@media (min-width: 640px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+/* Responsive Styles for screens >= 1080px */
+@media (min-width: 1080px) {
+    .info-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four columns in one row */
+    }
+}
+
 /* Footer */
-footer {
-    background-color: #333;
-    color: white;
+
+/* Accordion styles (mobile first)*/
+.accordion {
+    display: block; /* Show accordion by default for mobile */
+}
+
+/* Footer for larger screens */
+.footer-content {
+    display: none; /* Hide the normal footer for mobile view */
+}
+
+/* Footer Trademark */
+.footer-trademark {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+/* Styles for screens ≥ 640px */
+@media (min-width: 640px) {
+   
+    .accordion {
+        display: none; /* Hide accordion for larger screens */
+    }
+
+    /* Show the regular footer */
+    .footer-content {
+        display: flex; /* Show footer columns */
+        justify-content: space-between; /* Space between columns */
+        flex-wrap: wrap; /* Ensure the columns wrap if the content is too wide */
+    }
+
+    .footer-column {
+        flex: 1; /* Ensure each column takes up equal space */
+        margin: 0 10px; /* Margin between columns */
+    }
+
+    .footer-column h4 {
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* stack each column vertically */
+    .footer-column p {
+        margin: 5px 0; /* Vertical space between items */
+        color: white;
+    }
+
+    footer {
+        background-color: #b25e5e; 
+        color: white;
+        padding: 20px; /* Add some padding for spacing */
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 20px; /* Space between columns */
+    }
+    
+    }
+    
+    .footer-column h4 {
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-column p {
+        margin: 5px 0; /* Vertical space between items */
+        color: white;
+    }
+
+
+    
+
+/* Product Details page styling*/
+.product-details {
     padding: 20px;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
+.product-card {
+    display: flex; 
+    align-items: flex-start; 
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.footer-content div {
-    flex: 1;
-    margin: 0 10px;
+/* Adjust product image and icon position */
+.product-image-container {
+    position: relative;
+    width: 50%; /* Adjust width for larger screens */
+    margin-right: 20px; /* Space between image and info */
 }
 
-.footer-content h4 {
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.product-image-container img {
+    width: 100%; 
+    border-radius: 10px; 
 }
 
-.footer-content ul {
-    list-style: none;
-    padding: 0;
+.icon-heart {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    font-size: 24px;
+    color: white; /* Ensure it's visible on the image */
 }
 
-.footer-content ul li {
-    margin-bottom: 5px;
+/* Product Info Section */
+.product-info {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start; /* Align items to the left */
+    width: 50%; /* Use half width for larger screens */
+}
+.add-to-cart-btn {
+    padding: 12px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.5s ease; /* Smooth transition */
 }
 
-.footer-content ul li a {
-    color: white;
-    text-decoration: none;
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
 }
-
-footer p {
-    text-align: center;
-}
-
-/* Responsive Design - Mobile First Approach */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 639px) {
+    .product-card {
+        flex-direction: column; /* Stack image and info vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center align text */
     }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    .product-image-container {
+        width: 100%; /* Full width for the image in mobile view */
+        margin-right: 0; /* Remove right margin */
     }
 
-    .product-grid {
-        grid-template-columns: 1fr;
+    .product-info {
+        width: 100%; /* Full width for product info */
+        padding: 10px 0; /* Add padding for spacing */
     }
+}
+
+
+/* Similar Products Section */
+.similar-products {
+    display: none; /* Hide in mobile view */
+}
+
+@media (min-width: 640px) {
+    .similar-products {
+        display: block; 
+    }
+
+    
+    .similar-products h3 {
+        text-align: center; /* Center the heading text */
+        margin-bottom: 20px; /* Add some space below the heading */
+    }
+
+    .similar-product-grid {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 10px; /* Reduced gap between products */
+    }
+}
+
+/* Similar Product Card Styling */
+.similar-product-card {
+    text-align: center; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 10px; 
+    background-color: white; 
+}
+
+/* Adjust the small product image */
+.small-product-image {
+    width: 80%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+/* Styling for Small Product Name and price */
+.small-product-name {
+    font-size: 0.9rem; 
+    margin-top: 5px; 
+}
+.small-product-price {
+    font-size: 0.8rem; 
+    color: #333; /* Set color */
+    margin-top: 5px; /* Space above the price */
 }
